@@ -19,6 +19,7 @@ def get_percent_republican(df):
     
     desired_election_data = df.select(
         df['state'],
+        df['state_po'],
         df['county_name'],
         (percent_republican_udf(
             df['party'],
@@ -33,6 +34,7 @@ def get_percent_republican(df):
 def get_winning_candidates(df):
     desired_election_data1 = df.select(
         df['state'],
+        df['state_po'],
         df['county_name'],
         df['party'],
         df['candidatevotes'],
@@ -41,16 +43,16 @@ def get_winning_candidates(df):
 
     df.registerTempTable('data')
     query = """
-        SELECT state, county_name, max(candidatevotes) as candidatevotes
+        SELECT state, state_po, county_name, max(candidatevotes) as candidatevotes
         FROM data
-        GROUP BY state, county_name
+        GROUP BY state, state_po, county_name
     """
 
     desired_election_data2 = spark.sql(query)
 
     final_data = desired_election_data2.join(
         desired_election_data1,
-        on=['state', 'county_name', 'candidatevotes'],
+        on=['state', 'state_po', 'county_name', 'candidatevotes'],
         how='left'
     )
 
