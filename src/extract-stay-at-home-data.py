@@ -16,13 +16,11 @@ def main(input_file):
     desired_columns = raw_data.select(
         raw_data['state'],
         raw_data['county'],
-        raw_data['date_stay_at_home_announced'],
         raw_data['date_stay_at_home_effective'],
     )
 
     # Group the data by state and county
     grouped_data = desired_columns.groupBy(['state', 'county']).agg(
-        functions.collect_set("date_stay_at_home_announced"),
         functions.collect_set("date_stay_at_home_effective"),
     )
 
@@ -30,8 +28,6 @@ def main(input_file):
     final_data = grouped_data.select(
         grouped_data['state'],
         grouped_data['county'],
-        grouped_data['collect_set(date_stay_at_home_announced)'][0]
-            .alias('date_stay_at_home_announced'),
         grouped_data['collect_set(date_stay_at_home_effective)'][0]
             .alias('date_stay_at_home_effective'),
     )
@@ -39,7 +35,7 @@ def main(input_file):
     output_file = "../data/extracted/stay-at-home-data.csv"
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    final_data.toPandas().to_csv(output_file, header=True)
+    final_data.toPandas().to_csv(output_file, header=True, index=False)
 
 
 if __name__ == '__main__':

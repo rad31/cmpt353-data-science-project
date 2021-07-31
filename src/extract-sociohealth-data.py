@@ -24,12 +24,11 @@ def main(input_file):
         raw_data['primary_care_physicians_rate'],
         raw_data['high_school_graduation_rate'],
         raw_data['percent_some_college'],
-        raw_data['percent_unemployed_CHR'], # what is the difference
-        raw_data['percent_unemployed_CDC'], # between these two?
+        raw_data['percent_unemployed_CDC'],
         raw_data['median_household_income'],
         raw_data['per_capita_income'],
-        raw_data['num_deaths'], # do we know what deaths is in this context?
-        raw_data['percent_vaccinated'], # is this covid vaccination?
+        raw_data['num_deaths'],
+        raw_data['percent_vaccinated'],
         raw_data['eightieth_percentile_income'],
         raw_data['twentieth_percentile_income'],
         raw_data['percent_food_insecure'],
@@ -40,7 +39,7 @@ def main(input_file):
     output_file = "../data/extracted/sociohealth-data.csv"
     
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    desired_columns.toPandas().to_csv(output_file, header=True)
+    desired_columns.toPandas().to_csv(output_file, header=True, index=False)
 
 
 if __name__ == '__main__':

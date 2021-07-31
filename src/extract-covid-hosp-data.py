@@ -1,13 +1,7 @@
 import sys
 from pyspark.sql import SparkSession, functions, types
-# import org.apache.spark.sql.functions.countDistinct
-# import pyspark.sql.functions.countDistinct
-from pyspark.sql.functions import countDistinct
 
-from pyspark.sql import Window
-from pyspark.sql.functions import row_number, desc
-
-spark = SparkSession.builder.appName('weather ETL').getOrCreate()
+spark = SparkSession.builder.appName('covid-cases').getOrCreate()
 spark.sparkContext.setLogLevel('WARN')
 
 assert sys.version_info >= (3, 5) # make sure we have Python 3.5+
@@ -64,7 +58,7 @@ def main(input_file):
     )
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    desired_covid_data.toPandas().to_csv("../data/extracted/covid-data-with-hosp.csv", header=True)
+    desired_covid_data.toPandas().to_csv("../data/extracted/covid-data-with-hosp.csv", header=True, index=False)
 
 
 
