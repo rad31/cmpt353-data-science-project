@@ -23,8 +23,16 @@ def main():
     )
 
     # Tidy up column names and remove redundant columns
-    covid_voter['state'] = covid_voter['state_y']
-    covid_voter = covid_voter.drop(columns=['state_x', 'state_y', 'state_po', 'county_name'])
+    covid_voter = covid_voter[[
+        'state_y',
+        'county',
+        'num_infected',
+        'num_hosp',
+        'num_not_hosp',
+        'percent_hosp',
+        'percent_republican',
+    ]]
+    covid_voter = covid_voter.rename(columns={'state_y' : 'state'})
 
     # Convert state and counties to uppercase to match covid & voting data
     stay_at_home_data['state'] = stay_at_home_data['state'].str.upper()
@@ -50,8 +58,11 @@ def main():
         right_on=['state', 'county'],
     )
     
+    # Sort by state and county name
+    sorted_data = all_data.sort_values(['state', 'county'])
+
     # Write to csv
-    all_data.to_csv(output_file, header=True, index=False)
+    sorted_data.to_csv(output_file, header=True, index=False)
 
 if __name__ == '__main__':
     main()

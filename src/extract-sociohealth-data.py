@@ -31,7 +31,7 @@ def main(input_file):
         raw_data['percent_vaccinated'],
         raw_data['eightieth_percentile_income'],
         raw_data['twentieth_percentile_income'],
-        raw_data['percent_food_insecure'],
+        raw_data['percent_below_poverty'],
         raw_data['percent_age_65_and_older'],
         raw_data['percent_age_17_and_younger'],
     )
