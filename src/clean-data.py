@@ -11,6 +11,10 @@ def days_until_stay_at_home(col):
     days_until_order = stay_at_home_order - beginning_of_covid
     return days_until_order.days
 
+# Normalize the values such that they will be in the range [-1.0, 1.0]
+# If there was a stay at home order, the soonest implementation is 1
+# and the values are linearly, inversely proportional to time before order
+# If there was not a stay at home order, the value is -1
 def stay_at_home_normalizer(col, min_val, max_val):
     if col < 0:
         return col
@@ -36,10 +40,6 @@ def main(input_file):
     max_days = all_data['date_stay_at_home_effective'].max()
     min_days = all_data['date_stay_at_home_effective'][all_data['date_stay_at_home_effective'] > 0].min()
 
-    # Normalize the values such that they will be in the range [-1.0, 1.0]
-    # If there was a stay at home order, the soonest implementation is 1
-    # and the values are linearly, inversely proportional to time before order
-    # If there was not a stay at home order, the value is -1
     all_data['date_stay_at_home_effective'] = all_data['date_stay_at_home_effective'].apply(
         stay_at_home_normalizer,
         min_val=min_days,
