@@ -13,9 +13,6 @@ spark.sparkContext.setLogLevel('WARN')
 assert sys.version_info >= (3, 5) # make sure we have Python 3.5+
 assert spark.version >= '2.4' # make sure we have Spark 2.4+
 
-def percent_hosp(num_hosp, num_not_hosp):
-    return num_hosp / (num_hosp + num_not_hosp) 
-
 def is_hospitalized(col):
     if col == 'Yes':
         return 1
