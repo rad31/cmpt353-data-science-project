@@ -132,9 +132,9 @@ def main(input_file):
     ]]
 
     # Write to csv
-    all_data_file = '../data/cleaned/all-data.csv'
-    social_data_file = '../data/cleaned/social-data.csv'
-    economic_data_file = '../data/cleaned/economic-data.csv'
+    all_data_file = '../../data/cleaned/all-data.csv'
+    social_data_file = '../../data/cleaned/social-data.csv'
+    economic_data_file = '../../data/cleaned/economic-data.csv'
 
     all_data.to_csv(all_data_file, index=False)
     social_data.to_csv(social_data_file, index=False)
@@ -142,5 +142,5 @@ def main(input_file):
 
 
 if __name__ == '__main__':
-    input_file = '../data/extracted/joined-data.csv'
+    input_file = '../../data/extracted/joined-data.csv'
     main(input_file)
