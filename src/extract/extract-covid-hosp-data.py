@@ -58,7 +58,7 @@ def main(input_file):
     )
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    desired_covid_data.toPandas().to_csv("../data/extracted/covid-data-with-hosp.csv", header=True, index=False)
+    desired_covid_data.toPandas().to_csv("../../data/extracted/covid-data-with-hosp.csv", header=True, index=False)
 
 
 
