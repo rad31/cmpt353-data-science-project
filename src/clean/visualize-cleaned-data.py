@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def main():
-    all_data = pd.read_csv('../data/cleaned/social-data.csv')
+    all_data = pd.read_csv('../../data/cleaned/social-data.csv')
 
     infected = all_data['total_percent_infected']
     vaccinated = all_data['percent_vaccinated']
