@@ -32,12 +32,12 @@ def main(input_file):
             .alias('date_stay_at_home_effective'),
     )
 
-    output_file = "../data/extracted/stay-at-home-data.csv"
+    output_file = "../../data/extracted/stay-at-home-data.csv"
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
     final_data.toPandas().to_csv(output_file, header=True, index=False)
 
 
 if __name__ == '__main__':
-    input_file = '../data/US_counties_COVID19_health_weather_data.csv'
+    input_file = '../../data/US_counties_COVID19_health_weather_data.csv'
     main(input_file)
