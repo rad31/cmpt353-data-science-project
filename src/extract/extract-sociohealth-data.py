@@ -36,7 +36,7 @@ def main(input_file):
         raw_data['percent_age_17_and_younger'],
     )
 
-    output_file = "../data/extracted/sociohealth-data.csv"
+    output_file = "../../data/extracted/sociohealth-data.csv"
     
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
     desired_columns.toPandas().to_csv(output_file, header=True, index=False)
