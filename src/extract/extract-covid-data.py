@@ -69,7 +69,7 @@ def main(in_directory):
     # desired_covid_data.write.csv('../data/covid_rates.csv')
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    desired_covid_data.toPandas().to_csv("../data/extracted/covid-data.csv", header=True)
+    desired_covid_data.toPandas().to_csv("../../data/extracted/covid-data.csv", header=True)
 
 
 
