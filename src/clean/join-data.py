@@ -1,10 +1,10 @@
 import pandas as pd
 
-covid_file        = '../data/extracted/covid-data-with-hosp.csv'
-sociohealth_file  = '../data/extracted/sociohealth-data.csv'
-voter_file        = '../data/extracted/percent-republican-voters.csv'
-stay_at_home_file = '../data/extracted/stay-at-home-data.csv'
-output_file       = '../data/extracted/joined-data.csv'
+covid_file        = '../../data/extracted/covid-data-with-hosp.csv'
+sociohealth_file  = '../../data/extracted/sociohealth-data.csv'
+voter_file        = '../../data/extracted/percent-republican-voters.csv'
+stay_at_home_file = '../../data/extracted/stay-at-home-data.csv'
+output_file       = '../../data/extracted/joined-data.csv'
 
 
 def main():
