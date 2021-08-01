@@ -87,9 +87,9 @@ def main(input_file):
     # final_data = get_winning_candidates(valid_election_data_2016)
 
     # Converting to Pandas is safe because there can be at most ~3000 rows (one per US county)
-    final_data.toPandas().to_csv('../data/extracted/percent-republican-voters.csv', header=True, index=False)
+    final_data.toPandas().to_csv('../../data/extracted/percent-republican-voters.csv', header=True, index=False)
 
 
 if __name__ == '__main__':
-    input_file = '../data/countypres_2000-2020.csv'
+    input_file = '../../data/countypres_2000-2020.csv'
     main(input_file)
