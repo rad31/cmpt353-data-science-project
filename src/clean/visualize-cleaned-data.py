@@ -66,7 +66,7 @@ def main():
         
     # show plot
     # plt.show()
-    plt.savefig('../data/cleaned/box_plot.png')
+    plt.savefig('../../data/cleaned/box_plot.png')
 
 if __name__ == '__main__':
     main()
