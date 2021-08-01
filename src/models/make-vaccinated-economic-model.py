@@ -19,7 +19,7 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
 
 def main():
-    economic_data = pd.read_csv('../data/cleaned/economic-data.csv')
+    economic_data = pd.read_csv('../../data/cleaned/economic-data.csv')
     # print(economic_data)
 
     X = economic_data.drop(columns=['state', 
