@@ -18,7 +18,7 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
 
 def main():
-    all_data = pd.read_csv('../data/cleaned/all-data.csv')
+    all_data = pd.read_csv('../../data/cleaned/all-data.csv')
     # print(all_data)
 
     X = all_data.drop(columns=['state', 
