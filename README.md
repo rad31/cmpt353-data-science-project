@@ -1,12 +1,21 @@
  📦cmpt353-data-science-project
+ 
  ┣ 📂data
- ┃ ┣ 📂cleaned                     # cleaned data used directly for models
- ┃ ┣ 📂extracted                   # raw extracted data from main .csv's in 'data/'
- ┣ 📂src               ## source files to manipulate/extract data from 'data/' .csv's ##
- ┃ ┣ 📂clean                      # clean extracted data to produce clean .csv's
- ┃ ┣ 📂extract                    # extract data from main .csv's
- ┃ ┣ 📂models                     # make models
+ 
+ ┃ ┣ 📂cleaned                     
+ 
+ ┃ ┣ 📂extracted                   
+ 
+ ┣ 📂src                         
+ 
+ ┃ ┣ 📂clean                      
+ 
+ ┃ ┣ 📂extract                   
+ 
+ ┃ ┣ 📂models                     
+ 
  ┣ 📜README.md
+ 
  ┗ 📜scalers.txt
  
  The files in /data contain the cleaned data that is used directly for the models, the extracted data that contains the columns we're interested in from the main .csv's that are just in '/data'.
