@@ -1,5 +1,7 @@
 # Covid Data Science and Machine Learning Project
 
+This project extracts various social, political, health, and economic data, which is used in conjunction with COVID-19 case data to create machine learning models and attempt to predict the amount of cases as well as vaccinations per US county.
+
 ## File Layout
 
  📦cmpt353-data-science-project
@@ -54,17 +56,8 @@ This was done in order to determine which of these partitions had the greatest a
   
 * The `src/extract/extract-voter-data.py` script uses `/data/raw/countypres_2000-2020.csv`, which was retrieved from <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ>. Note that the extracted data was for the 2016 election, which was the most recent prior to the COVID-19 pandemic.
 
-* The `src/extract/extract-sociohealth-data.py` script uses `data/raw/us_county_sociohealth_data.csv`, which was retrieved from <https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data">https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data>.
+* The `src/extract/extract-sociohealth-data.py` script uses `data/raw/us_county_sociohealth_data.csv`, which was retrieved from <https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data>.
 
 * The `src/extract/extract-stay-at-home-data.py` script uses the `US_counties_COVID19_health_weather_data.csv`, which was retrieved from <https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data>. It is not included in this repository due to its size (1.28 GB).
 
-* The `src/extract/extract-covid-hosp-data.py` script uses the `COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv`, which was retrieved from <https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4>. It is not included in this repository due to its size (3.66 GB)
-
-  
-
-
-
-
- 
- 
- 
+* The `src/extract/extract-covid-hosp-data.py` script uses the `COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv`, which was retrieved from <https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4>. It is not included in this repository due to its size (3.66 GB).
