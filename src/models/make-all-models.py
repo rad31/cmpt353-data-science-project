@@ -13,6 +13,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import VotingRegressor
 from sklearn.neural_network import MLPRegressor
 
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
+
 def get_svr_model(transfomer):
     return make_pipeline(
         transfomer,
@@ -52,7 +55,7 @@ scalers = {
 }
 
 models = {
-    'SVR' : get_svr_model,
+    # 'SVR' : get_svr_model,
     'KNeighborsRegressor' : get_kneighbors_model,
     'DecisionTreeRegressor' : get_decision_tree_model,
     'RandomForestRegressor' : get_random_forest_model,
@@ -60,19 +63,19 @@ models = {
 }
 
 def main():
-    all_data = pd.read_csv('../../data/cleaned/all-data.csv')
-    social_data = pd.read_csv('../../data/cleaned/social-data.csv')
-    economic_data = pd.read_csv('../../data/cleaned/economic-data.csv')
+    all_data = pd.read_csv('../../data/cleaned/new-all-data.csv')
+    social_data = pd.read_csv('../../data/cleaned/new-social-data.csv')
+    economic_data = pd.read_csv('../../data/cleaned/new-economic-data.csv')
 
     cols_to_drop = [
         'state', 
         'county', 
-        'num_infected', 
+        # 'num_infected', 
         'total_percent_infected',
-        'num_hosp',
-        'num_not_hosp',
-        'percent_hosp', 
-        'total_percent_hosp',
+        # 'num_hosp',
+        # 'num_not_hosp',
+        # 'percent_hosp', 
+        # 'total_percent_hosp',
         'percent_vaccinated',
     ]
 
@@ -93,15 +96,16 @@ def main():
             for model_name in models:
                 print('    ', model_name, sep='')
                 for scaler_name in scalers:
-                    r2 = 0
+                    mse = 0
                     for i in range(iterations):
                         X_train, X_test, y_train, y_test = train_test_split(Xs[X_label], Ys[Y_label])
                         scaler = scalers[scaler_name]
                         model = models[model_name](scaler)
                         model.fit(X_train, y_train)
-                        r2 += model.score(X_test, y_test)
-                    r2 /= iterations
-                    print('      ', scaler_name, ':\t', r2, sep='')
+                        pred = model.predict(X_test)
+                        mse += mean_squared_error(y_test, pred)
+                    mse /= iterations
+                    print('      ', scaler_name, ':\t', mse, sep='')
 
 if __name__ == '__main__':
     main()
