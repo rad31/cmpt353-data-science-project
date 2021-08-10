@@ -47,15 +47,14 @@ def main(input_file):
     )
 
     # Remove any null or NaN values
-    all_data = all_data[all_data['num_hosp'].notna()]
-    all_data = all_data[all_data['num_not_hosp'].notna()]
-    all_data = all_data[all_data['num_infected'].notna()]
+    # all_data = all_data[all_data['num_hosp'].notna()]
+    # all_data = all_data[all_data['num_not_hosp'].notna()]
+    # all_data = all_data[all_data['num_infected'].notna()]
     all_data = all_data[all_data['total_population'].notna()]
     all_data = all_data[all_data['population_density_per_sqmi'].notna()]
-    all_data = all_data[all_data['percent_vaccinated'].notna()]
-    all_data = all_data[all_data['percent_hosp'].notna()]
+    # all_data = all_data[all_data['percent_hosp'].notna()]
     all_data = all_data[all_data['percent_republican'].notna()]
-    all_data = all_data[all_data['percent_vaccinated'].notna()]
+    all_data = all_data[all_data['percent_vac'].notna()]
     all_data = all_data[all_data['percent_adults_with_obesity'].notna()]
     all_data = all_data[all_data['percent_physically_inactive'].notna()]
     all_data = all_data[all_data['percent_below_poverty'].notna()]
@@ -70,12 +69,16 @@ def main(input_file):
     all_data = all_data[all_data['eightieth_percentile_income'].notna()]
     all_data = all_data[all_data['twentieth_percentile_income'].notna()]
     all_data = all_data[all_data['date_stay_at_home_effective'].notna()]
+    all_data = all_data[all_data['infection_rate'].notna()]
+    all_data.rename(columns = {'infection_rate': 'total_percent_infected'}, inplace=True)
+    all_data.rename(columns = {'percent_vac': 'percent_vaccinated'}, inplace=True)
+
 
     # Convert percentage to decimal
     all_data['percent_below_poverty'] = all_data['percent_below_poverty'] / 100
     all_data['percent_age_17_and_younger'] = all_data['percent_age_17_and_younger'] / 100
     all_data['percent_age_65_and_older'] = all_data['percent_age_65_and_older'] / 100
-    all_data['percent_vaccinated'] = all_data['percent_vaccinated'] / 100
+    # all_data['percent_vaccinated'] = all_data['percent_vaccinated'] / 100
     all_data['percent_adults_with_obesity'] = all_data['percent_adults_with_obesity'] / 100
     all_data['percent_physically_inactive'] = all_data['percent_physically_inactive'] / 100
     all_data['percent_uninsured'] = all_data['percent_uninsured'] / 100
@@ -84,19 +87,19 @@ def main(input_file):
     all_data['percent_some_college'] = all_data['percent_some_college'] / 100
 
     # Add columns for percent_infected and percent hospitalized
-    all_data['total_percent_infected'] = all_data['num_infected'] / all_data['total_population']
-    all_data['total_percent_hosp'] = all_data['num_hosp'] / all_data['total_population']
+    # all_data['total_percent_infected'] = all_data['num_infected'] / all_data['total_population']
+    # all_data['total_percent_hosp'] = all_data['num_hosp'] / all_data['total_population']
 
     # Partition dataset into social and economic columns
     social_data = all_data[[
         'state',
         'county',
-        'num_infected',
+        # 'num_infected',
         'total_percent_infected',
-        'num_hosp',
-        'num_not_hosp',
-        'percent_hosp',
-        'total_percent_hosp',
+        # 'num_hosp',
+        # 'num_not_hosp',
+        # 'percent_hosp',
+        # 'total_percent_hosp',
         'percent_vaccinated',
         'total_population',
         'population_density_per_sqmi',
@@ -111,12 +114,12 @@ def main(input_file):
     economic_data = all_data[[
         'state',
         'county',
-        'num_infected',
+        # 'num_infected',
         'total_percent_infected',
-        'num_hosp',
-        'num_not_hosp',
-        'percent_hosp',
-        'total_percent_hosp',
+        # 'num_hosp',
+        # 'num_not_hosp',
+        # 'percent_hosp',
+        # 'total_percent_hosp',
         'percent_vaccinated',
         'total_population',
         'population_density_per_sqmi',
@@ -132,9 +135,9 @@ def main(input_file):
     ]]
 
     # Write to csv
-    all_data_file = '../../data/cleaned/all-data.csv'
-    social_data_file = '../../data/cleaned/social-data.csv'
-    economic_data_file = '../../data/cleaned/economic-data.csv'
+    all_data_file = '../../data/cleaned/new-all-data.csv'
+    social_data_file = '../../data/cleaned/new-social-data.csv'
+    economic_data_file = '../../data/cleaned/new-economic-data.csv'
 
     all_data.to_csv(all_data_file, index=False)
     social_data.to_csv(social_data_file, index=False)
@@ -142,5 +145,5 @@ def main(input_file):
 
 
 if __name__ == '__main__':
-    input_file = '../../data/extracted/joined-data.csv'
+    input_file = '../../data/extracted/new-joined-data.csv'
     main(input_file)
