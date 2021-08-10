@@ -1,10 +1,10 @@
 import pandas as pd
 
-covid_file        = '../../data/extracted/covid-data-with-hosp.csv'
+covid_file        = '../../data/extracted/all_covid_data.csv'
 sociohealth_file  = '../../data/extracted/sociohealth-data.csv'
 voter_file        = '../../data/extracted/percent-republican-voters.csv'
 stay_at_home_file = '../../data/extracted/stay-at-home-data.csv'
-output_file       = '../../data/extracted/joined-data.csv'
+output_file       = '../../data/extracted/new-joined-data.csv'
 
 
 def main():
@@ -26,10 +26,8 @@ def main():
     covid_voter = covid_voter[[
         'state_y',
         'county',
-        'num_infected',
-        'num_hosp',
-        'num_not_hosp',
-        'percent_hosp',
+        'infection_rate',
+        'percent_vac',
         'percent_republican',
     ]]
     covid_voter = covid_voter.rename(columns={'state_y' : 'state'})
@@ -49,6 +47,7 @@ def main():
     # Convert state and counties to uppercase to match covid & voting & stay home data
     sociohealth_data['state'] = sociohealth_data['state'].str.upper()
     sociohealth_data['county'] = sociohealth_data['county'].str.upper()
+    sociohealth_data = sociohealth_data.drop(columns=['percent_vaccinated'])
 
     # Merge all of the data
     all_data = covid_voter_stay_home.merge(
