@@ -75,5 +75,5 @@ def main(in_directory):
 
 
 if __name__=='__main__':
-    in_directory = "../../data/COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv"
+    in_directory = "../../data/raw/COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv"
     main(in_directory)

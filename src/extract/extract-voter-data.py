@@ -91,5 +91,5 @@ def main(input_file):
 
 
 if __name__ == '__main__':
-    input_file = '../../data/countypres_2000-2020.csv'
+    input_file = '../../data/raw/countypres_2000-2020.csv'
     main(input_file)

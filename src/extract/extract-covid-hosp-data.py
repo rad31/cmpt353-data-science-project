@@ -64,5 +64,5 @@ def main(input_file):
 
 
 if __name__=='__main__':
-    input_file = "../../data/COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv"
+    input_file = "../../data/raw/COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv"
     main(input_file)
