@@ -34,15 +34,13 @@
 
   Data used in the project:
   
-  <ul>
-  <li>The `src/extract/extract-voter-data.py` script uses `/data/raw/countypres_2000-2020.csv`, which was retrieved from <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ"></a>. Note that the extracted data was for the 2016 election, which was the most recent prior to the COVID-19 pandemic.</li>
+  * The `src/extract/extract-voter-data.py` script uses `/data/raw/countypres_2000-2020.csv`, which was retrieved from <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ</a>. Note that the extracted data was for the 2016 election, which was the most recent prior to the COVID-19 pandemic.
 
-  <li>The `src/extract/extract-sociohealth-data.py` script uses `data/raw/us_county_sociohealth_data.csv`, which was retrieved from <a href="https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data"></a>.</li>
+  * The `src/extract/extract-sociohealth-data.py` script uses `data/raw/us_county_sociohealth_data.csv`, which was retrieved from <a href="https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data">https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data</a>.
 
-  <li>The `src/extract/extract-stay-at-home-data.py`, uses the `US_counties_COVID19_health_weather_data.csv`, which was retrieved from <a href="https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data"></a>. It is not included in this repository due to its size (1.28 GB).</li>
+  * The `src/extract/extract-stay-at-home-data.py`, uses the `US_counties_COVID19_health_weather_data.csv`, which was retrieved from <a href="https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data">https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data</a>. It is not included in this repository due to its size (1.28 GB).
 
-  <li>The `src/extract/extract-covid-hosp-data.py`, uses the `COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv`, which was retrieved from <a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4"></a>.
-  </ul>
+  * The `src/extract/extract-covid-hosp-data.py`, uses the `COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv`, which was retrieved from <a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4">https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4</a>.
 
   
 
