@@ -1,0 +1,159 @@
+All
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.022786264559022943
+      StandardScaler:	0.018853743118992246
+      MinMaxScaler:	0.01827885067583499
+      MaxAbsScaler:	0.017636605465786333
+      RobustScaler:	0.018562072692256716
+    DecisionTreeRegressor
+      NoTransformer:	0.021964938414190456
+      StandardScaler:	0.022174839625292278
+      MinMaxScaler:	0.022080195561354824
+      MaxAbsScaler:	0.021876820690305356
+      RobustScaler:	0.022191569815452405
+    RandomForestRegressor
+      NoTransformer:	0.016805078564255192
+      StandardScaler:	0.016903100746162344
+      MinMaxScaler:	0.016678783970674606
+      MaxAbsScaler:	0.01713429536865383
+      RobustScaler:	0.01682643592572103
+    MLPRegressor
+      NoTransformer:	0.022563680370046905
+      StandardScaler:	0.02032362182300799
+      MinMaxScaler:	0.022149829725470853
+      MaxAbsScaler:	0.02166880121349651
+      RobustScaler:	0.020259222431450986
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.07017685185185187
+      StandardScaler:	0.05194821673525378
+      MinMaxScaler:	0.05020147462277093
+      MaxAbsScaler:	0.048928652263374485
+      RobustScaler:	0.05296628943758573
+    DecisionTreeRegressor
+      NoTransformer:	0.06116832190214907
+      StandardScaler:	0.06171624469266444
+      MinMaxScaler:	0.06207421614736429
+      MaxAbsScaler:	0.06166736821477563
+      RobustScaler:	0.06132718433601151
+    RandomForestRegressor
+      NoTransformer:	0.045861621760774844
+      StandardScaler:	0.04601531945932471
+      MinMaxScaler:	0.04661403608512471
+      MaxAbsScaler:	0.04659061204492175
+      RobustScaler:	0.04594738466418977
+    MLPRegressor
+      NoTransformer:	0.0806379308058883
+      StandardScaler:	0.049274106304632116
+      MinMaxScaler:	0.050289891473216344
+      MaxAbsScaler:	0.05065321483905725
+      RobustScaler:	0.049875737081375826
+Social
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.024029357177954756
+      StandardScaler:	0.019771087726524805
+      MinMaxScaler:	0.01897773670517603
+      MaxAbsScaler:	0.0182751131151135
+      RobustScaler:	0.019720421546400545
+    DecisionTreeRegressor
+      NoTransformer:	0.022054681791945047
+      StandardScaler:	0.022174537604420272
+      MinMaxScaler:	0.022160932636495635
+      MaxAbsScaler:	0.02218656012343838
+      RobustScaler:	0.02175162187051354
+    RandomForestRegressor
+      NoTransformer:	0.0175496244897752
+      StandardScaler:	0.017257470314104326
+      MinMaxScaler:	0.01753666060742675
+      MaxAbsScaler:	0.017537104130000657
+      RobustScaler:	0.017550559253688716
+    MLPRegressor
+      NoTransformer:	0.022636990888588636
+      StandardScaler:	0.020119721920107435
+      MinMaxScaler:	0.021978779730813202
+      MaxAbsScaler:	0.021392453961959802
+      RobustScaler:	0.02073446889678933
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.08157536008230452
+      StandardScaler:	0.05526881001371742
+      MinMaxScaler:	0.055064917695473246
+      MaxAbsScaler:	0.053032167352537726
+      RobustScaler:	0.05603842592592593
+    DecisionTreeRegressor
+      NoTransformer:	0.06488526814292248
+      StandardScaler:	0.06692821869488537
+      MinMaxScaler:	0.06537832190214907
+      MaxAbsScaler:	0.06584527630805409
+      RobustScaler:	0.06557356554967665
+    RandomForestRegressor
+      NoTransformer:	0.051337829058587914
+      StandardScaler:	0.05114781349044356
+      MinMaxScaler:	0.050988353295659
+      MaxAbsScaler:	0.051364004321309185
+      RobustScaler:	0.05104956593427877
+    MLPRegressor
+      NoTransformer:	0.08908566340143664
+      StandardScaler:	0.055744350891694584
+      MinMaxScaler:	0.056614923401274664
+      MaxAbsScaler:	0.05748044944546567
+      RobustScaler:	0.054908169194535617
+Economic
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.022723427361267916
+      StandardScaler:	0.021093746226721312
+      MinMaxScaler:	0.02131733673509327
+      MaxAbsScaler:	0.02138510471211271
+      RobustScaler:	0.02101072168411403
+    DecisionTreeRegressor
+      NoTransformer:	0.02571947067073841
+      StandardScaler:	0.02580279512847445
+      MinMaxScaler:	0.025405057282096938
+      MaxAbsScaler:	0.025850909666810112
+      RobustScaler:	0.025750265068561547
+    RandomForestRegressor
+      NoTransformer:	0.020095044074378572
+      StandardScaler:	0.019770046002483364
+      MinMaxScaler:	0.019685751037904903
+      MaxAbsScaler:	0.019817845700103878
+      RobustScaler:	0.019714294888562786
+    MLPRegressor
+      NoTransformer:	0.022536972637352527
+      StandardScaler:	0.02217005314360832
+      MinMaxScaler:	0.022560092794354957
+      MaxAbsScaler:	0.02260239837275658
+      RobustScaler:	0.022163926312180164
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.07216666666666667
+      StandardScaler:	0.06349936556927296
+      MinMaxScaler:	0.06350694444444445
+      MaxAbsScaler:	0.06419056927297666
+      RobustScaler:	0.06369854252400549
+    DecisionTreeRegressor
+      NoTransformer:	0.07863577895355674
+      StandardScaler:	0.07743013880723756
+      MinMaxScaler:	0.07670167058592983
+      MaxAbsScaler:	0.0767818152720622
+      RobustScaler:	0.07644600398458423
+    RandomForestRegressor
+      NoTransformer:	0.060398747576280595
+      StandardScaler:	0.059487774751276576
+      MinMaxScaler:	0.05979157288431577
+      MaxAbsScaler:	0.05934972121278102
+      RobustScaler:	0.059126476561594477
+    MLPRegressor
+      NoTransformer:	0.08003111831820939
+      StandardScaler:	0.061878104214925844
+      MinMaxScaler:	0.06482850942728509
+      MaxAbsScaler:	0.06516594269133766
+/Users/tl/myDocuments/SFU/Summer2021/CMPT353/exercises/e8/venv/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:500: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+      RobustScaler:	0.06189669412953351

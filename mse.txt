@@ -1,0 +1,165 @@
+All
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.0009609437883570602
+      StandardScaler:	0.0006642876916636415
+      MinMaxScaler:	0.0006312379548404593
+      MaxAbsScaler:	0.0006615733349424949
+      RobustScaler:	0.0006425255232481407
+    DecisionTreeRegressor
+      NoTransformer:	0.0008962886159240791
+      StandardScaler:	0.0009575777805180024
+      MinMaxScaler:	0.0009265023906908334
+      MaxAbsScaler:	0.0009509973706742734
+      RobustScaler:	0.0009201281288012508
+    RandomForestRegressor
+      NoTransformer:	0.0006180823997429537
+      StandardScaler:	0.0006086936395390474
+      MinMaxScaler:	0.0005761486998507265
+      MaxAbsScaler:	0.000589282610487322
+      RobustScaler:	0.0006104244218309902
+    MLPRegressor
+      NoTransformer:	0.000979529972494785
+      StandardScaler:	0.0008115794827179281
+      MinMaxScaler:	0.0009385090627245692
+      MaxAbsScaler:	0.0008600383683689353
+      RobustScaler:	0.0007835738149372714
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.008844229177383403
+      StandardScaler:	0.004881584692215364
+      MinMaxScaler:	0.004513275310785323
+      MaxAbsScaler:	0.00438371524777092
+      RobustScaler:	0.0051109478909465034
+    DecisionTreeRegressor
+      NoTransformer:	0.006875935664868782
+      StandardScaler:	0.006775862113979017
+      MinMaxScaler:	0.00640736007280498
+      MaxAbsScaler:	0.006779008519159288
+      RobustScaler:	0.006812372996398789
+    RandomForestRegressor
+      NoTransformer:	0.003967406784895213
+      StandardScaler:	0.004032568565147309
+      MinMaxScaler:	0.004114397830796065
+      MaxAbsScaler:	0.004110365220201242
+      RobustScaler:	0.00428566605994637
+    MLPRegressor
+/Users/tl/myDocuments/SFU/Summer2021/CMPT353/exercises/e8/venv/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:500: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+      NoTransformer:	0.010509712536081458
+      StandardScaler:	0.004439089879137271
+      MinMaxScaler:	0.004726863937599062
+      MaxAbsScaler:	0.004518110358370677
+      RobustScaler:	0.004446610833101373
+Social
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.0010209342514120364
+      StandardScaler:	0.0006806217591802605
+      MinMaxScaler:	0.0007200625169807
+      MaxAbsScaler:	0.0007117863912590378
+      RobustScaler:	0.0007170013107990853
+    DecisionTreeRegressor
+      NoTransformer:	0.0009259368920168084
+      StandardScaler:	0.0008930905019077021
+      MinMaxScaler:	0.000911809779565255
+      MaxAbsScaler:	0.0009038834755280862
+      RobustScaler:	0.0008908756744179528
+    RandomForestRegressor
+      NoTransformer:	0.00064028250743146
+      StandardScaler:	0.0005934264013406655
+      MinMaxScaler:	0.0006245087809377171
+      MaxAbsScaler:	0.0005840937529554351
+      RobustScaler:	0.0006067516538136611
+    MLPRegressor
+      NoTransformer:	0.0009144653082406596
+      StandardScaler:	0.0007796709388701199
+      MinMaxScaler:	0.0009391631195758881
+      MaxAbsScaler:	0.0008498944101414912
+      RobustScaler:	0.0007879655411874417
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.010758602256944444
+      StandardScaler:	0.0053480885159465025
+      MinMaxScaler:	0.005197638477366255
+      MaxAbsScaler:	0.005131559130658436
+      RobustScaler:	0.005500492106052812
+    DecisionTreeRegressor
+      NoTransformer:	0.007222236938312042
+      StandardScaler:	0.007268754825771645
+      MinMaxScaler:	0.007392215218030787
+      MaxAbsScaler:	0.007267998062590012
+      RobustScaler:	0.007164330004832203
+    RandomForestRegressor
+      NoTransformer:	0.004574662042962643
+      StandardScaler:	0.004591942451652306
+      MinMaxScaler:	0.004778698441216991
+      MaxAbsScaler:	0.004664344250322432
+      RobustScaler:	0.004646550586946534
+    MLPRegressor
+      NoTransformer:	0.012281799858231735
+      StandardScaler:	0.0054830439773424595
+      MinMaxScaler:	0.005589982522832239
+      MaxAbsScaler:	0.005618420693207551
+      RobustScaler:	0.005402860295369249
+Economic
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	0.0009680919490658716
+      StandardScaler:	0.0008078012179661694
+      MinMaxScaler:	0.0008121606694807138
+      MaxAbsScaler:	0.0008518840711379805
+      RobustScaler:	0.0008347176347288975
+    DecisionTreeRegressor
+      NoTransformer:	0.0011877148375715168
+      StandardScaler:	0.0012259067117569625
+      MinMaxScaler:	0.0012248722552016303
+      MaxAbsScaler:	0.0011999228904820078
+      RobustScaler:	0.0012418793571656035
+    RandomForestRegressor
+      NoTransformer:	0.0007329864875626875
+      StandardScaler:	0.0007451373743605586
+      MinMaxScaler:	0.000754130711887413
+      MaxAbsScaler:	0.000761612621715476
+      RobustScaler:	0.000702435476270061
+    MLPRegressor
+      NoTransformer:	0.0008964289802578811
+      StandardScaler:	0.0009373849612740662
+      MinMaxScaler:	0.0008883160508097087
+      MaxAbsScaler:	0.0008735824194228831
+      RobustScaler:	0.0008633318050664177
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.00859201512345679
+      StandardScaler:	0.007003794660922496
+      MinMaxScaler:	0.007529244365140603
+      MaxAbsScaler:	0.007381696559927983
+      RobustScaler:	0.007379577402692045
+    DecisionTreeRegressor
+      NoTransformer:	0.010999911198548007
+      StandardScaler:	0.010251819372914004
+      MinMaxScaler:	0.010538236170567266
+      MaxAbsScaler:	0.01080623437226157
+      RobustScaler:	0.010534830050416189
+    RandomForestRegressor
+      NoTransformer:	0.006732811771315389
+      StandardScaler:	0.006232853153554601
+      MinMaxScaler:	0.00721073748402125
+      MaxAbsScaler:	0.006278044576231992
+      RobustScaler:	0.0066031915905844524
+    MLPRegressor
+/Users/tl/myDocuments/SFU/Summer2021/CMPT353/exercises/e8/venv/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:500: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+      NoTransformer:	0.01063687272954476
+      StandardScaler:	0.007316952486387042
+      MinMaxScaler:	0.008588601498713887
+      MaxAbsScaler:	0.00803147820940739
+      RobustScaler:	0.007166836407786254

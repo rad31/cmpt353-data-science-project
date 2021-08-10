@@ -1,0 +1,153 @@
+All
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	-0.022426572798176593
+      StandardScaler:	0.2726813773365353
+      MinMaxScaler:	0.3131554612848444
+      MaxAbsScaler:	0.3376204619765196
+      RobustScaler:	0.2797661594017217
+    DecisionTreeRegressor
+      NoTransformer:	-0.03303123145465355
+      StandardScaler:	-0.06315733642059976
+      MinMaxScaler:	-0.012493526774813446
+      MaxAbsScaler:	-0.03513248465954223
+      RobustScaler:	-0.015366774475453792
+    RandomForestRegressor
+      NoTransformer:	0.3862849816125346
+      StandardScaler:	0.3678255552638292
+      MinMaxScaler:	0.3531576575144624
+      MaxAbsScaler:	0.3658524878651543
+      RobustScaler:	0.3720867966939949
+    MLPRegressor
+      NoTransformer:	-0.01944448704231112
+      StandardScaler:	0.18402282245128262
+      MinMaxScaler:	-0.014157512669466344
+      MaxAbsScaler:	0.006716622719389664
+      RobustScaler:	0.16100281209168826
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.29975135363151256
+      StandardScaler:	0.5987242286882457
+      MinMaxScaler:	0.6425633485183218
+      MaxAbsScaler:	0.6483771121252101
+      RobustScaler:	0.6005924315678801
+    DecisionTreeRegressor
+      NoTransformer:	0.44759726023326607
+      StandardScaler:	0.45461289687730255
+      MinMaxScaler:	0.4414449206188616
+      MaxAbsScaler:	0.45582133459215124
+      RobustScaler:	0.4458731543906914
+    RandomForestRegressor
+      NoTransformer:	0.6747407716687237
+      StandardScaler:	0.6681664942173537
+      MinMaxScaler:	0.6977912868078825
+      MaxAbsScaler:	0.6844507916855752
+      RobustScaler:	0.6816780192191961
+    MLPRegressor
+      NoTransformer:	0.15964885022302988
+      StandardScaler:	0.6214610105938989
+      MinMaxScaler:	0.6195777500838969
+      MaxAbsScaler:	0.6181944367239833
+      RobustScaler:	0.6277974344111382
+Social
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	-0.08210708080872349
+      StandardScaler:	0.25091108178843896
+      MinMaxScaler:	0.25537763683774717
+      MaxAbsScaler:	0.2745047303987807
+      RobustScaler:	0.23530746271324854
+    DecisionTreeRegressor
+      NoTransformer:	-0.016259626838283348
+      StandardScaler:	-0.0025108246533281585
+      MinMaxScaler:	-0.04414070716616535
+      MaxAbsScaler:	-0.01382206381511114
+      RobustScaler:	0.013211708549215695
+    RandomForestRegressor
+      NoTransformer:	0.34156595016293706
+      StandardScaler:	0.3306203199418236
+      MinMaxScaler:	0.3382078458170953
+      MaxAbsScaler:	0.34953535520322193
+      RobustScaler:	0.3486128378651455
+    MLPRegressor
+      NoTransformer:	-0.002036124583024934
+      StandardScaler:	0.13989175136051962
+      MinMaxScaler:	-0.006886652071507437
+      MaxAbsScaler:	0.03328661920493502
+      RobustScaler:	0.1519032374100787
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.14130954069057022
+      StandardScaler:	0.5823660055344352
+      MinMaxScaler:	0.5787345417578373
+      MaxAbsScaler:	0.5973045292581755
+      RobustScaler:	0.5503305577747514
+    DecisionTreeRegressor
+      NoTransformer:	0.41011056703600346
+      StandardScaler:	0.4184869068152467
+      MinMaxScaler:	0.4323821682823195
+      MaxAbsScaler:	0.44136178128997094
+      RobustScaler:	0.4235519571716644
+    RandomForestRegressor
+      NoTransformer:	0.6195531552765261
+      StandardScaler:	0.6296744562246778
+      MinMaxScaler:	0.6432622210624956
+      MaxAbsScaler:	0.6375842754284197
+      RobustScaler:	0.627564339858783
+    MLPRegressor
+      NoTransformer:	-0.0025373356496506292
+      StandardScaler:	0.5501868523743763
+      MinMaxScaler:	0.5379179575430801
+      MaxAbsScaler:	0.5438122246595798
+      RobustScaler:	0.5893248914283612
+Economic
+  InfectionRate
+    KNeighborsRegressor
+      NoTransformer:	-0.025505422921476652
+      StandardScaler:	0.09469710098049332
+      MinMaxScaler:	0.094899523451145
+      MaxAbsScaler:	0.07285306940860371
+      RobustScaler:	0.09953724170871665
+    DecisionTreeRegressor
+      NoTransformer:	-0.2809191329738553
+      StandardScaler:	-0.36972485487289963
+      MinMaxScaler:	-0.3171632516698982
+      MaxAbsScaler:	-0.2976644941988488
+      RobustScaler:	-0.35864633412798586
+    RandomForestRegressor
+      NoTransformer:	0.19598933946865324
+      StandardScaler:	0.2048769134450849
+      MinMaxScaler:	0.19898715259775498
+      MaxAbsScaler:	0.19884453273436137
+      RobustScaler:	0.18242026766393127
+    MLPRegressor
+      NoTransformer:	-0.01420915381350486
+      StandardScaler:	0.05227832463551798
+      MinMaxScaler:	-0.00677798390065727
+      MaxAbsScaler:	-0.013816006677283277
+      RobustScaler:	0.023802499327814985
+  VaccinationRate
+    KNeighborsRegressor
+      NoTransformer:	0.29487457571720277
+      StandardScaler:	0.4159206578814918
+      MinMaxScaler:	0.40525336181069027
+      MaxAbsScaler:	0.40424335214495677
+      RobustScaler:	0.40084974612758034
+    DecisionTreeRegressor
+      NoTransformer:	0.16673680340675942
+      StandardScaler:	0.13893323097225735
+      MinMaxScaler:	0.1430132217393679
+      MaxAbsScaler:	0.13854533284786416
+      RobustScaler:	0.14627504543066286
+    RandomForestRegressor
+      NoTransformer:	0.4812335396617657
+      StandardScaler:	0.48102405275865034
+      MinMaxScaler:	0.4812112268917522
+      MaxAbsScaler:	0.48540923709292183
+      RobustScaler:	0.47395918457077946
+    MLPRegressor
+      NoTransformer:	0.17318684050425456
+      StandardScaler:	0.44070826508629474
+      MinMaxScaler:	0.3962497081195907
+      MaxAbsScaler:	0.38338685156994695
+      RobustScaler:	0.4486292231189757
