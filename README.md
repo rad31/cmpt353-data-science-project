@@ -30,7 +30,7 @@ The files in `data/` directory contain the cleaned data that is used directly fo
  
 The files in `src/` are used to manipulate and extract data from the .csv's inside `src/data/`. The files in `src/extract/` produce the extracted .csv's from the .csv's that are in /data. Which are then further refined by the files in `src/clean/` which produce the cleaned .csv's, that are used by the files in `src/models/` to produce the models. All scripts should be run from their nearest parent directory. For instance, to run the `clean-data.py` script, the user should be within `src/clean/` directory before calling the script.
  
-The files in `src/extract/` and `src/clean` are written in python, using spark, as we are using fairly large amounts of data. The command to run these scripts are:
+The files in `src/extract/` and `src/clean` are written in python, using spark, as we are using fairly large amounts of data. Note that prior to executing either the `src/extract/extract-covid-hosp-data.py` or `extract-stay-at-home-data.py` scripts, the datasets must be downloaded from the sources provided in the reference section and placed in the `data/raw` directory. The command to run these scripts are:
 ```
 spark-submit <file_name>
 ```
@@ -54,7 +54,7 @@ This was done in order to determine which of these partitions had the greatest a
 
 ## Data Used in the Project:
   
-* The `src/extract/extract-voter-data.py` script uses `/data/raw/countypres_2000-2020.csv`, which was retrieved from <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ>. Note that the extracted data was for the 2016 election, which was the most recent prior to the COVID-19 pandemic.
+* The `src/extract/extract-voter-data.py` script uses `data/raw/countypres_2000-2020.csv`, which was retrieved from <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ>. Note that the extracted data was for the 2016 election, which was the most recent prior to the COVID-19 pandemic.
 
 * The `src/extract/extract-sociohealth-data.py` script uses `data/raw/us_county_sociohealth_data.csv`, which was retrieved from <https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data>.
 
