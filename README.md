@@ -30,9 +30,15 @@ The files in `data/` directory contain the cleaned data that is used directly fo
  
 The files in `src/` are used to manipulate and extract data from the .csv's inside `src/data/`. The files in `src/extract/` produce the extracted .csv's from the .csv's that are in /data. Which are then further refined by the files in `src/clean/` which produce the cleaned .csv's, that are used by the files in `src/models/` to produce the models. All scripts should be run from their nearest parent directory. For instance, to run the `clean-data.py` script, the user should be within `src/clean/` directory before calling the script.
  
-The files in `src/extract/` and `src/clean/` are written in python, using spark, as we are using fairly large amounts of data. Note that prior to executing either the `extract-covid-hosp-data.py` or `extract-stay-at-home-data.py` scripts, the datasets must be downloaded from the sources provided in the reference section and placed in the `data/raw` directory. The command to run these scripts are:
+The files in `src/extract/` (except those listed below) are written in python, using spark, as we are using fairly large amounts of data. Note that prior to executing either the `extract-covid-hosp-data.py` or `extract-stay-at-home-data.py` scripts, the datasets must be downloaded from the sources provided in the reference section and placed in the `data/raw` directory. The command to run these scripts are:
 ```
 spark-submit <file_name>
+```
+
+The files in `src/extract` that deal with COVID data, `src/extract/extract-stay-at-home-data.py`, `src/extract/extract-infection-data.py`,`src/extract/extract-vaccine-data.py`, and `src/extract/join-covid-data.py` do not use spark. Neither do the files in `src/clean`. The command to run these scripts are:
+
+```
+python3 <file_name>
 ```
 
 The files in `src/models` are written in python, using pandas, and can be run with the command:
@@ -60,4 +66,6 @@ This was done in order to determine which of these partitions had the greatest a
 
 * The `src/extract/extract-stay-at-home-data.py` script uses the `US_counties_COVID19_health_weather_data.csv`, which was retrieved from <https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data>. It is not included in this repository due to its size (1.28 GB).
 
-* The `src/extract/extract-covid-hosp-data.py` script uses the `COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv`, which was retrieved from <https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4>. It is not included in this repository due to its size (3.66 GB).
+* The `src/extract/get-raw-covid-data.py` script retrieves data from the `CovidActNow` API from <https://apidocs.covidactnow.org>. It reads the CSV files from the API and saves them in `data/raw`
+
+* The `src/extract/extract-infection-data.py`,`src/extract/extract-vaccine-data.py`, and `src/extract/join-covid-data.py` scripts use the `GFG.csv`, which was retrieved from `src/extract/get-raw-covid-data.py` above
