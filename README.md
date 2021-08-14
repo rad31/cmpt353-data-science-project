@@ -35,7 +35,7 @@ The files in `src/extract/` (except those listed below) are written in python, u
 spark-submit <file_name>
 ```
 
-The files in `src/extract` that deal with COVID data, `src/extract/extract-stay-at-home-data.py`, `src/extract/extract-infection-data.py`,`src/extract/extract-vaccine-data.py`, and `src/extract/join-covid-data.py` do not use spark. Neither do the files in `src/clean`. The command to run these scripts are:
+The files in `src/extract` that deal with COVID data, `src/extract/extract-stay-at-home-data.py`, `src/extract/extract-infection-data.py`,`src/extract/extract-vaccine-data.py`, and `src/extract/join-covid-data.py` do not use spark. Neither do the scripts in `src/clean`. The command to run any of these scripts are:
 
 ```
 python3 <file_name>
